@@ -1,24 +1,54 @@
+$( document ).ready(function() {
+	$("#target").text(getRandomNumber(19, 120));
+
 winCount = 0;
 lossCount = 0;
 numCount = 0;
 
 
-//Break down of what needs to be done:
-
-//1. Generate a random number between 19 - 120 
-	//Function: math.random, math.floor
-randomNumber = Math.floor(Math.random() * (120-19) ) + 19;
-console.log(randomNumber)
-$("#target").text(randomNumber);
+function getRandomNumber(min, max) {
+ return (Math.floor(Math.random() * (max-min) ) + min);
+}
 
 
-//2. Display that random number to the user
-	//Funtion: Jquery .text (need to link in jquery CDN to my index.html)
+var numberOptions = {};
+
+numberOptions.one = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
+numberOptions.two = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
+numberOptions.three = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
+numberOptions.four = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
+
+var i = 0;
+for (one in numberOptions)
+{
+	numberOptions[i] = numberOptions[a];
+	++i;
+}
+
+numberOptions[0]();
+numberOptions[1]();
+numberOption["one"]();
+numberOption["two"]();
+
+//for (var i = 0; i < numberOptions.length; i++) {
+
+//}
+
+});
+//store results in an array?
+//
+
+//var jerryPhotos = {
+//one: [1,12],
+//two:[1,12],
+//three:[1,12],
+//four: [1,12]
+//};
+
+//for (var i = 0; i < jerryPhotos.length; i++) {
+//for (var color in jerryPhotos)
 
 
-
-//3. Assign each of the 4 photos a unique number between 1 - 12.
-	//Function: math.random, math.floor that can be run 4 times and store each output in a variable to be called later
 
 //4. Add onto the the counter with each click of the 4 photos
 	//Click handler jquery on.click
@@ -44,5 +74,14 @@ $("#target").text(randomNumber);
 	// reset num.count =0 
 	// call generate a new random number funtion. 
 
+
+
+
+
+//	$("<div class='crystal'>")
+//		.addClass(color)
+//		.data('value', getRandomNumberTarget(crystalColors[0], crystalColors[1]))
+//		.appendTo("#crystals");
+//}
 
 

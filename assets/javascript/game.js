@@ -1,54 +1,44 @@
 $( document ).ready(function() {
-	$("#target").text(getRandomNumber(19, 120));
 
 winCount = 0;
 lossCount = 0;
 numCount = 0;
+scoreCount =0;
 
 
 function getRandomNumber(min, max) {
  return (Math.floor(Math.random() * (max-min) ) + min);
 }
 
+$("#target").text(getRandomNumber(19, 120));
 
 var numberOptions = {};
 
-numberOptions.one = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
-numberOptions.two = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
-numberOptions.three = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
-numberOptions.four = function getRandomNumber(min, max) {console.log(getRandomNumber(1,12))};
+numberOptions.one = getRandomNumber(1, 12);
+numberOptions.two = getRandomNumber(1, 12);
+numberOptions.three = getRandomNumber(1, 12);
+numberOptions.four = getRandomNumber(1, 12);
 
-var i = 0;
-for (one in numberOptions)
-{
-	numberOptions[i] = numberOptions[a];
-	++i;
-}
 
-numberOptions[0]();
-numberOptions[1]();
-numberOption["one"]();
-numberOption["two"]();
+$( "#jerry-one" ).click(function() {
+  console.log(numberOptions.one);
+});
 
-//for (var i = 0; i < numberOptions.length; i++) {
+$( "#jerry-two" ).click(function() {
+  console.log(numberOptions.two);
+});
 
-//}
+$( "#jerry-three" ).click(function() {
+  console.log(numberOptions.three);
+});
+
+$( "#jerry-four" ).click(function() {
+  console.log(numberOptions.four);
+});
+
 
 });
-//store results in an array?
-//
-
-//var jerryPhotos = {
-//one: [1,12],
-//two:[1,12],
-//three:[1,12],
-//four: [1,12]
-//};
-
-//for (var i = 0; i < jerryPhotos.length; i++) {
-//for (var color in jerryPhotos)
-
-
+//$("#testing").on("click", function()) {}
 
 //4. Add onto the the counter with each click of the 4 photos
 	//Click handler jquery on.click

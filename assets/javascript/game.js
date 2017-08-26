@@ -34,10 +34,13 @@ $( "#jerry-one" ).click(function() {
             score.innerHTML = (scoreCount); 
 
   		if (scoreCount === numberOptions.five){
-			alert("Winning feels almost as good as notarizing");
+			alert("Winning feels almost as good as notarizing, go you!");
             winCount += 1; 
        		$("#wins").text(winCount);
 			reset();
+			$("#target").text(numberOptions.five);
+
+
 }
 
 		else if (scoreCount >= numberOptions.five){
@@ -45,6 +48,8 @@ $( "#jerry-one" ).click(function() {
 			lossCount += 1;
 			$("#loss").text(lossCount);
 			reset();
+			$("#target").text(numberOptions.five);
+
 }
 
 });
@@ -74,7 +79,7 @@ $( "#jerry-two" ).click(function() {
 $( "#jerry-three" ).click(function() {
   console.log(numberOptions.three);
   	var score= document.getElementById("player-total")
-            scoreCount += (numberOptions.two);  
+            scoreCount += (numberOptions.three);  
             score.innerHTML = (scoreCount);
 
           	 if (scoreCount === numberOptions.five){
@@ -96,7 +101,7 @@ $( "#jerry-three" ).click(function() {
 $( "#jerry-four" ).click(function() {
   console.log(numberOptions.four);
   	var score= document.getElementById("player-total")
-            scoreCount += (numberOptions.two);  
+            scoreCount += (numberOptions.four);  
             score.innerHTML = (scoreCount); 
 
                 if (scoreCount === numberOptions.five){

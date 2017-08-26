@@ -4,7 +4,28 @@ Style hover for clicking each Jerry
 Style div for wins losses
 Style div for random number
 
-image{
-width: 100px
-height: 100px
+#image{
+width: 100px;
+height: 100px;
+}
+
+h1 {
+	font-size: 25px;
+	text-align: center;
+}
+
+h2 {
+	text-align: center;
+	font-size: 100px;
+}
+
+.panel-default{
+   	border-color: blue;
+    border-style: dashed;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.btn-primary{
+	width: -webkit-fill-available;
 }

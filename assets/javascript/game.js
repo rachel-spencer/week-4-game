@@ -5,9 +5,15 @@ lossCount = 0;
 numCount = 0;
 scoreCount =0;
 
+var scoreCount=0;
 
 function getRandomNumber(min, max) {
  return (Math.floor(Math.random() * (max-min) ) + min);
+}
+
+function reset() {
+	scoreCount =0;
+	$("#player-total").text(scoreCount);
 }
 
 var numberOptions = {};
@@ -31,16 +37,14 @@ $( "#jerry-one" ).click(function() {
 			alert("Winning feels almost as good as notarizing");
             winCount += 1; 
        		$("#wins").text(winCount);
-			
-			//add resetfunciton call
+			reset();
 }
 
 		else if (scoreCount >= numberOptions.five){
 			alert("Awe shucks! You didn't get it but don't worry, there's always next time");
 			lossCount += 1;
 			$("#loss").text(lossCount);
-		
-			//add reset function call
+			reset();
 }
 
 });
@@ -55,17 +59,16 @@ $( "#jerry-two" ).click(function() {
 				alert("Winning feels almost as good as notarizing");
             	winCount += 1; 
        			$("#wins").text(winCount);
-			
-				//add resetfunciton call
+				reset();
 }
 
 			else if (scoreCount >= numberOptions.five){
 			alert("Awe shucks! You didn't get it but don't worry, there's always next time");
 			lossCount += 1;
 			$("#loss").text(lossCount);
+			reset();
 }
-		
-			//add reset function call
+	
 });
 
 $( "#jerry-three" ).click(function() {
@@ -78,14 +81,14 @@ $( "#jerry-three" ).click(function() {
 				alert("Winning feels almost as good as notarizing");
             	winCount += 1; 
        			$("#wins").text(winCount);
-			
-				//add resetfunciton call
+       			reset();
 }
 
 			else if (scoreCount >= numberOptions.five){
 				alert("Awe shucks! You didn't get it but don't worry, there's always next time");
 				lossCount += 1;
 				$("#loss").text(lossCount);
+				reset();
 } 
 
 });
@@ -100,14 +103,14 @@ $( "#jerry-four" ).click(function() {
 					alert("Winning feels almost as good as notarizing");
             		winCount += 1; 
        				$("#wins").text(winCount);
-			
-					//add resetfunciton call
+       				reset();
 }
 
 				else if (scoreCount >= numberOptions.five){
 					alert("Awe shucks! You didn't get it but don't worry, there's always next time");
 					lossCount += 1;
 					$("#loss").text(lossCount);
+					reset();
 }
 });
 

@@ -10,68 +10,109 @@ function getRandomNumber(min, max) {
  return (Math.floor(Math.random() * (max-min) ) + min);
 }
 
-$("#target").text(getRandomNumber(19, 120));
-
 var numberOptions = {};
 
 numberOptions.one = getRandomNumber(1, 12);
 numberOptions.two = getRandomNumber(1, 12);
 numberOptions.three = getRandomNumber(1, 12);
 numberOptions.four = getRandomNumber(1, 12);
+numberOptions.five = getRandomNumber(19, 120);
+
+$("#target").text(numberOptions.five);
 
 
 $( "#jerry-one" ).click(function() {
   console.log(numberOptions.one);
+	var score= document.getElementById("player-total")
+            scoreCount += (numberOptions.one);  
+            score.innerHTML = (scoreCount); 
+
+  		if (scoreCount === numberOptions.five){
+			alert("Winning feels almost as good as notarizing");
+            winCount += 1; 
+       		$("#wins").text(winCount);
+			
+			//add resetfunciton call
+}
+
+		else if (scoreCount >= numberOptions.five){
+			alert("Awe shucks! You didn't get it but don't worry, there's always next time");
+			lossCount += 1;
+			$("#loss").text(lossCount);
+		
+			//add reset function call
+}
+
 });
 
 $( "#jerry-two" ).click(function() {
   console.log(numberOptions.two);
+  	var score= document.getElementById("player-total")
+            scoreCount += (numberOptions.two);  
+            score.innerHTML = (scoreCount); 
+
+       	  	if (scoreCount === numberOptions.five){
+				alert("Winning feels almost as good as notarizing");
+            	winCount += 1; 
+       			$("#wins").text(winCount);
+			
+				//add resetfunciton call
+}
+
+			else if (scoreCount >= numberOptions.five){
+			alert("Awe shucks! You didn't get it but don't worry, there's always next time");
+			lossCount += 1;
+			$("#loss").text(lossCount);
+}
+		
+			//add reset function call
 });
 
 $( "#jerry-three" ).click(function() {
   console.log(numberOptions.three);
+  	var score= document.getElementById("player-total")
+            scoreCount += (numberOptions.two);  
+            score.innerHTML = (scoreCount);
+
+          	 if (scoreCount === numberOptions.five){
+				alert("Winning feels almost as good as notarizing");
+            	winCount += 1; 
+       			$("#wins").text(winCount);
+			
+				//add resetfunciton call
+}
+
+			else if (scoreCount >= numberOptions.five){
+				alert("Awe shucks! You didn't get it but don't worry, there's always next time");
+				lossCount += 1;
+				$("#loss").text(lossCount);
+} 
+
 });
 
 $( "#jerry-four" ).click(function() {
   console.log(numberOptions.four);
+  	var score= document.getElementById("player-total")
+            scoreCount += (numberOptions.two);  
+            score.innerHTML = (scoreCount); 
+
+                if (scoreCount === numberOptions.five){
+					alert("Winning feels almost as good as notarizing");
+            		winCount += 1; 
+       				$("#wins").text(winCount);
+			
+					//add resetfunciton call
+}
+
+				else if (scoreCount >= numberOptions.five){
+					alert("Awe shucks! You didn't get it but don't worry, there's always next time");
+					lossCount += 1;
+					$("#loss").text(lossCount);
+}
 });
 
 
 });
-//$("#testing").on("click", function()) {}
 
-//4. Add onto the the counter with each click of the 4 photos
-	//Click handler jquery on.click
-
-//5. Create a score counter and insert in global space
-	//winCount: 0
-	//lossCount: 0
-	//numCount: 0
-
-//6. Create a destination for the score counter
-	//Function: jquery .text to dump the variables onto the counter and display using jquery .text
-
-//7. Create and if/then:
-	//if counter is = the random number
-	// alert win 
-	// add 1 to win count
-	// reset num.count = 0 
-	// call generate a new random number function
-
-	//Else If the counter is > the random number 
-	// alert loss
-	// add 1 to loss count
-	// reset num.count =0 
-	// call generate a new random number funtion. 
-
-
-
-
-
-//	$("<div class='crystal'>")
-//		.addClass(color)
-//		.data('value', getRandomNumberTarget(crystalColors[0], crystalColors[1]))
-//		.appendTo("#crystals");
-//}
 
 
